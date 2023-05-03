@@ -54,17 +54,17 @@ WriteLine();
 // Display the serialized object graph
 WriteLine(File.ReadAllText(path));
 
-//Deserializing XML files
-using (FileStream xmlLoad = File.Open(path, FileMode.Open))
-{
-    // deserialize and cast the object graph into a List of Person
-    List<Person>? loadedPeople = xs.Deserialize(xmlLoad) as List<Person>;
+////Deserializing XML files
+//using (FileStream xmlLoad = File.Open(path, FileMode.Open))
+//{
+//    // deserialize and cast the object graph into a List of Person
+//    List<Person>? loadedPeople = xs.Deserialize(xmlLoad) as List<Person>;
 
-    if (loadedPeople is not null)
-    {
-        foreach (Person p in loadedPeople)
-        {
-            WriteLine($"{p.LastName} has {p.Children?.Count ?? 0} children.");
-        }
-    }
-}
+//    if (loadedPeople is not null)
+//    {
+//        foreach (Person p in loadedPeople)
+//        {
+//            WriteLine($"{p.LastName} has {p.Children?.Count ?? 0} children.");
+//        }
+//    }
+//}
